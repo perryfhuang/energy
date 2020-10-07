@@ -9,7 +9,9 @@ const Layout = props => {
   //     url: 'https://api.unsplash.com/photos/random',
   //     method: 'GET',
   //     params: {
-  //       orientation: 'landscape'
+  //       // orientation: 'landscape'
+  //       // Collection: https://unsplash.com/collections/1065396/desktop-wallpapers
+  //       collections: '1065396'
   //     },
   //     headers: {
   //       Authorization: 'Client-ID yk23mYmfN4Xl5vnoDvdHhIw3F_VRVUHH3ITwz-EzRrk'
@@ -19,12 +21,9 @@ const Layout = props => {
   //     .catch(console.error)
   // }, [])
 
-  // https://images.unsplash.com/photo-1596564211273-4707f6b992f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE1OTQ0Nn0
-
-  // https://images.unsplash.com/photo-1585039805664-50784b28009e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE1OTQ0Nn0
 
   const style = {
-    background: `black url(https://images.unsplash.com/photo-1489226094027-3b32e467edc5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE1OTQ0Nn0) no-repeat center center/cover`,
+    background: `black url(https://images.unsplash.com/photo-1460858919142-ffc0a74e3702?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE1OTQ0Nn0) no-repeat center center/cover`,
     // background: `black url(${pic}) no-repeat center center/cover`,
     position: 'fixed',
     // backgroundSize: 'contain',
@@ -36,12 +35,14 @@ const Layout = props => {
     top: '0',
     left: '0',
     padding: '0',
-    margin: '0'
+    margin: '0',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
 }
 
  return (
   <div style={style}>
-    This is the layout component
     {props.children}
   </div>
 )}

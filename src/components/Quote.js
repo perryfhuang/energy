@@ -21,19 +21,25 @@ const Quote = () => {
       .catch(console.error)
   }, [])
 
-  const style = {
+  const quoteStyle = {
     color: 'white',
-    position: 'fixed',
-    // backgroundSize: 'contain',
-    // backgroundRepeat: 'no-repeat',
-    // backgroundPosition: 'center center',
-    // backgroundColor: 'black',
+    // position: 'fixed',
+    position: 'absolute',
+    left: '25%',
+    fontSize: '16.2px',
     bottom: '20px',
-    margin: '0 auto'
+    margin: '0 auto',
+    width: '50%',
+    textAlign: 'center'
 }
 
+  const authorStyle = {
+    color: '#C0C0C0',
+    fontSize: '12px'
+  }
+
   return(
-    <h1 style={style}> "{quote}" - {author}</h1>
+    <p style={quoteStyle}> "{quote}" <br/><span style={authorStyle}>- {author}</span></p>
   )
 }
 

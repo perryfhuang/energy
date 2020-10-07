@@ -10,11 +10,13 @@ function App() {
   return (
     <div>
       <Route exact path='/' render={() =>
-        <Layout>
+        <React.Fragment>
+          <Layout>
+            <Clock/>
+          </Layout>
           <Weather/>
-          <Clock/>
           <Quote/>
-        </Layout>
+        </React.Fragment>
       } />
     </div>
   );
