@@ -24,7 +24,8 @@ const Layout = props => {
   // https://images.unsplash.com/photo-1585039805664-50784b28009e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE1OTQ0Nn0
 
   const style = {
-    background: `black url(https://images.unsplash.com/photo-1585039805664-50784b28009e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE1OTQ0Nn0) no-repeat center center/cover`,
+    background: `black url(https://images.unsplash.com/photo-1489226094027-3b32e467edc5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE1OTQ0Nn0) no-repeat center center/cover`,
+    // background: `black url(${pic}) no-repeat center center/cover`,
     position: 'fixed',
     // backgroundSize: 'contain',
     // backgroundRepeat: 'no-repeat',
