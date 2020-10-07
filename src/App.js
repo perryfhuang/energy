@@ -4,6 +4,7 @@ import './App.css'
 import Layout from './components/Layout'
 import Weather from './components/Weather'
 import Clock from './components/Clock'
+import Quote from './components/Quote'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Layout>
           <Weather/>
           <Clock/>
+          <Quote/>
         </Layout>
       } />
     </div>
