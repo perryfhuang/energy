@@ -20,7 +20,8 @@ const Weather = props => {
     top: '11.5px',
     right: '20px',
     padding: '0',
-    margin: '0'
+    margin: '0',
+    textShadow: '2px 2px 4px #000000'
 }
 
   const cityStyle = {
@@ -30,7 +31,8 @@ const Weather = props => {
     top: '40px',
     right: '20px',
     padding: '0',
-    margin: '0'
+    margin: '0',
+    textShadow: '2px 2px 4px #000000'
   }
 
  return (

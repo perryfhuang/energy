@@ -22,8 +22,11 @@ const Quote = () => {
   }, [])
 
   const handleClick = () => {
+    // Adds and removes class 'newQuote' which animates icon to spin (0.2s for full 360 spin)
     document.querySelector('i').classList.add('newQuote')
     setTimeout(()=>document.querySelector('i').classList.remove('newQuote'), 200)
+
+    // Grab new quote and set state
     axios({
       url: 'https://type.fit/api/quotes',
       method: 'GET'
@@ -44,12 +47,14 @@ const Quote = () => {
     bottom: '20px',
     margin: '0 auto',
     width: '50%',
-    textAlign: 'center'
+    textAlign: 'center',
+    textShadow: '2px 2px 4px #000000'
 }
 
   const authorStyle = {
-    color: '#696969',
-    fontSize: '14px'
+    color: 'e3e3e3',
+    fontSize: '14px',
+    textShadow: '2px 2px 4px #000000'
   }
 
   return(

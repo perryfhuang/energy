@@ -7,7 +7,8 @@ const style = {
   // alignItems: 'center',
   // justifyContent: 'center',
   color: 'white',
-  fontSize: '121px'
+  fontSize: '121px',
+  textShadow: '5px 5px 4px #000000'
 }
 
 const Clock = () => {
