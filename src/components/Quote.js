@@ -34,12 +34,12 @@ const Quote = () => {
 }
 
   const authorStyle = {
-    color: '#C0C0C0',
+    color: '#A9A9A9',
     fontSize: '12px'
   }
 
   return(
-    <p style={quoteStyle}> "{quote}" <br/><span style={authorStyle}>- {author}</span></p>
+    <p style={quoteStyle}> "{quote}" <br/>{author ? <span style={authorStyle}>- {author}</span> : null}</p>
   )
 }
 
