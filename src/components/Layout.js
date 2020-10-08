@@ -17,10 +17,9 @@ const Layout = props => {
         Authorization: 'Client-ID yk23mYmfN4Xl5vnoDvdHhIw3F_VRVUHH3ITwz-EzRrk'
       }
     })
-      .then(res => setPic(res.data.urls.raw) && console.log(res))
+      .then(res => setPic(res.data.urls.regular) && console.log(res))
       .catch(console.error)
   }, [])
-
 
   const style = {
     // background: `black url(https://images.unsplash.com/photo-1460858919142-ffc0a74e3702?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE1OTQ0Nn0) no-repeat center center/cover`,
