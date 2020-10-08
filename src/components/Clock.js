@@ -15,7 +15,5 @@ const Clock = () => {
       <h1 style={style}>{moment().format('h:mm A')}</h1>
   )
 }
-// const Clock =  <h1>TIME HERE</h1>
-
 
 export default Clock

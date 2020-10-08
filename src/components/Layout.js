@@ -21,8 +21,10 @@ const Layout = props => {
       .catch(console.error)
   }, [])
 
-  const style = {
     // background: `black url(https://images.unsplash.com/photo-1460858919142-ffc0a74e3702?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE1OTQ0Nn0) no-repeat center center/cover`,
+
+  const style = {
+    // background: `black url(https://images.unsplash.com/photo-1501979436208-9d8ea2f76f1e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1OTQ0Nn0) no-repeat center center/cover`,
     background: `black url(${pic}) no-repeat center center/cover`,
     position: 'fixed',
     // backgroundSize: 'contain',
