@@ -3,15 +3,39 @@ import axios from 'axios'
 
 const Weather = props => {
   const [weather, setWeather] = useState(null)
+  const [currentCity, setCurrentCity] = useState('')
+  const [searchCity, setSearchCity] = useState('')
 
   // res.data.main.temp
 
   useEffect(() => {
     // Get request to weather API by city ID (Boston), imperial units (F) and using API key
     axios('https://api.openweathermap.org/data/2.5/weather?id=4930956&units=imperial&appid=781a567418681e7ce8ccb1e883108120')
-      .then(res => setWeather(res.data.main.temp))
+      .then(res => {
+        setWeather(res.data.main.temp)
+        setCurrentCity(res.data.name)
+        console.log(res)
+      })
       .catch(console.error)
   }, [])
+
+  const handleChange = event => {
+    event.persist()
+    setSearchCity(event.target.value)
+  }
+
+
+  const handleSubmit = event => {
+    setSearchCity('')
+    event.preventDefault()
+    // Request weather for user inputted certain city
+    axios(`https://api.openweathermap.org/data/2.5/weather?q=${searchCity}&units=imperial&appid=781a567418681e7ce8ccb1e883108120`)
+      .then(res => {
+        setWeather(res.data.main.temp)
+        setCurrentCity(res.data.name)
+      })
+      .catch(console.error)
+  }
 
   const tempStyle = {
     fontSize: '24px',
@@ -35,10 +59,22 @@ const Weather = props => {
     textShadow: '2px 2px 2px #000000'
   }
 
+  const searchBoxStyle = {
+    position: 'fixed',
+    top: '60px',
+    right: '20px',
+    padding: '0',
+    margin: '0',
+  }
+
  return (
   <React.Fragment>
     <h1 style={tempStyle}>{Math.round(weather)}°F</h1>
-    <p style={cityStyle}>Boston</p>
+    <p style={cityStyle}>{currentCity}</p>
+    <form id='searchBox' style={searchBoxStyle} onSubmit={handleSubmit}>
+      <input type="text" id="city" name="city" value={searchCity} onChange={handleChange}/><br/>
+      <input type="submit" value="Submit"/>
+    </form>
   </React.Fragment>
 )}
 
