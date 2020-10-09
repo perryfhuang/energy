@@ -14,25 +14,25 @@ const Weather = props => {
   }, [])
 
   const tempStyle = {
-    fontSize: '23.4px',
+    fontSize: '24px',
     color: 'white',
     position: 'fixed',
     top: '11.5px',
     right: '20px',
     padding: '0',
     margin: '0',
-    textShadow: '2px 2px 4px #000000'
+    textShadow: '2px 2px 2px #000000'
 }
 
   const cityStyle = {
     color: 'white',
-    fontSize: '11.7px',
+    fontSize: '12px',
     position: 'fixed',
     top: '40px',
     right: '20px',
     padding: '0',
     margin: '0',
-    textShadow: '2px 2px 4px #000000'
+    textShadow: '2px 2px 2px #000000'
   }
 
  return (

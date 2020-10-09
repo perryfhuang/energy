@@ -48,13 +48,13 @@ const Quote = () => {
     margin: '0 auto',
     width: '50%',
     textAlign: 'center',
-    textShadow: '2px 2px 4px #000000'
+    textShadow: '1px 1px 1px #000000'
 }
 
   const authorStyle = {
     color: 'e3e3e3',
     fontSize: '14px',
-    textShadow: '2px 2px 4px #000000'
+    textShadow: '1px 1px 1px #000000'
   }
 
   return(
