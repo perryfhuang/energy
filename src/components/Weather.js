@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 const Weather = props => {
-  const [weather, setWeather] = useState(null)
+  const [weather, setWeather] = useState('')
+  const [temp, setTemp] = useState(null)
   const [currentCity, setCurrentCity] = useState('')
   const [searchCity, setSearchCity] = useState('')
+
+
 
   // res.data.main.temp
 
@@ -12,7 +15,8 @@ const Weather = props => {
     // Get request to weather API by city ID (Boston), imperial units (F) and using API key
     axios('https://api.openweathermap.org/data/2.5/weather?id=4930956&units=imperial&appid=781a567418681e7ce8ccb1e883108120')
       .then(res => {
-        setWeather(res.data.main.temp)
+        setWeather(res.data.weather[0].main)
+        setTemp(res.data.main.temp)
         setCurrentCity(res.data.name)
         console.log(res)
       })
@@ -31,7 +35,9 @@ const Weather = props => {
     // Request weather for user inputted certain city
     axios(`https://api.openweathermap.org/data/2.5/weather?q=${searchCity}&units=imperial&appid=781a567418681e7ce8ccb1e883108120`)
       .then(res => {
-        setWeather(res.data.main.temp)
+        console.log(res)
+        setWeather(res.data.weather[0].main)
+        setTemp(res.data.main.temp)
         setCurrentCity(res.data.name)
       })
       .catch(console.error)
@@ -67,14 +73,43 @@ const Weather = props => {
     margin: '0',
   }
 
+  const icons = {
+  clear: '☀',
+  rain: '️🌧',
+  storm: '⛈',
+  snow: '🌨',
+  mist: '🌫',
+  clouds: '☁',
+}
+
+  const iconSwitch = weather => {
+    switch(weather) {
+      case 'Clear':
+        return icons.clear
+      case 'Rain':
+        return icons.rain
+      case 'Storm':
+        return icons.storm
+      case 'Snow':
+        return icons.snow
+      case 'Mist':
+        return icons.mist
+      case 'Clouds':
+        return icons.clouds
+      default:
+        return null
+    }
+  }
+
  return (
   <React.Fragment>
-    <h1 style={tempStyle}>{Math.round(weather)}°F</h1>
+
+    <h1 style={tempStyle}>{iconSwitch(weather)} {Math.round(temp)}°F</h1>
     <p style={cityStyle}>{currentCity}</p>
-    <form id='searchBox' style={searchBoxStyle} onSubmit={handleSubmit}>
+    {/* <form id='searchBox' style={searchBoxStyle} onSubmit={handleSubmit}>
       <input type="text" id="city" name="city" value={searchCity} onChange={handleChange}/><br/>
       <input type="submit" value="Submit"/>
-    </form>
+    </form> */}
   </React.Fragment>
 )}
 
