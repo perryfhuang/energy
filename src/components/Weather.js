@@ -18,7 +18,7 @@ const Weather = props => {
         setWeather(res.data.weather[0].main)
         setTemp(res.data.main.temp)
         setCurrentCity(res.data.name)
-        console.log(res)
+        // console.log(res)
       })
       .catch(console.error)
   }, [])
@@ -35,7 +35,7 @@ const Weather = props => {
     // Request weather for user inputted certain city
     axios(`https://api.openweathermap.org/data/2.5/weather?q=${searchCity}&units=imperial&appid=781a567418681e7ce8ccb1e883108120`)
       .then(res => {
-        console.log(res)
+        // console.log(res)
         setWeather(res.data.weather[0].main)
         setTemp(res.data.main.temp)
         setCurrentCity(res.data.name)
