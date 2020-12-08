@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/energy/static/css/main.682b3fa8.chunk.css",
-    "main.js": "/energy/static/js/main.6a87c8a1.chunk.js",
-    "main.js.map": "/energy/static/js/main.6a87c8a1.chunk.js.map",
+    "main.css": "/energy/static/css/main.0dd3bc72.chunk.css",
+    "main.js": "/energy/static/js/main.7ae3c326.chunk.js",
+    "main.js.map": "/energy/static/js/main.7ae3c326.chunk.js.map",
     "runtime-main.js": "/energy/static/js/runtime-main.6ed78fe8.js",
     "runtime-main.js.map": "/energy/static/js/runtime-main.6ed78fe8.js.map",
     "static/js/2.af300cfd.chunk.js": "/energy/static/js/2.af300cfd.chunk.js",
     "static/js/2.af300cfd.chunk.js.map": "/energy/static/js/2.af300cfd.chunk.js.map",
     "index.html": "/energy/index.html",
-    "precache-manifest.e28fba6fe61ea8b219e37f68a70c9b5d.js": "/energy/precache-manifest.e28fba6fe61ea8b219e37f68a70c9b5d.js",
+    "precache-manifest.4818a71edea185a63e2b573fe8bdee1a.js": "/energy/precache-manifest.4818a71edea185a63e2b573fe8bdee1a.js",
     "service-worker.js": "/energy/service-worker.js",
-    "static/css/main.682b3fa8.chunk.css.map": "/energy/static/css/main.682b3fa8.chunk.css.map",
+    "static/css/main.0dd3bc72.chunk.css.map": "/energy/static/css/main.0dd3bc72.chunk.css.map",
     "static/js/2.af300cfd.chunk.js.LICENSE.txt": "/energy/static/js/2.af300cfd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6ed78fe8.js",
     "static/js/2.af300cfd.chunk.js",
-    "static/css/main.682b3fa8.chunk.css",
-    "static/js/main.6a87c8a1.chunk.js"
+    "static/css/main.0dd3bc72.chunk.css",
+    "static/js/main.7ae3c326.chunk.js"
   ]
 }
