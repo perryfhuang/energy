@@ -15,7 +15,7 @@ const Layout = props => {
         Authorization: 'Client-ID yk23mYmfN4Xl5vnoDvdHhIw3F_VRVUHH3ITwz-EzRrk'
       }
     })
-      .then(res => setPic(res.data.urls.regular) && console.log(res))
+      .then(res => setPic(res.data.urls.regular))
       .catch(console.error)
   }, [])
 

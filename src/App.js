@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom'
 import './App.css'
 import Layout from './components/Layout'
 import Weather from './components/Weather'
-import Clock from './components/Clock'
+import ClockGreeting from './components/ClockGreeting'
 import Quote from './components/Quote'
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <Route exact path='/' render={() =>
         <React.Fragment>
           <Layout>
-            <Clock/>
+            <ClockGreeting/>
           </Layout>
           <Weather/>
           <Quote/>
