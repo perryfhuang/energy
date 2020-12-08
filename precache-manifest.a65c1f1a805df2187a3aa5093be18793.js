@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2038bedbbae00d4b1ab56c95f28a8f47",
+    "revision": "34667915e4c8f88649a4549d06f54155",
     "url": "/energy/index.html"
   },
   {
-    "revision": "154a2504f77e8f58d0fb",
+    "revision": "3e26f3e02383edf20005",
     "url": "/energy/static/css/main.0dd3bc72.chunk.css"
   },
   {
-    "revision": "02e73e25fa27d2046796",
-    "url": "/energy/static/js/2.af300cfd.chunk.js"
+    "revision": "fa1991d0009c62c8f643",
+    "url": "/energy/static/js/2.a6c7ea23.chunk.js"
   },
   {
     "revision": "e4f6fd5e687738d725e56603861f1923",
-    "url": "/energy/static/js/2.af300cfd.chunk.js.LICENSE.txt"
+    "url": "/energy/static/js/2.a6c7ea23.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "154a2504f77e8f58d0fb",
-    "url": "/energy/static/js/main.7ae3c326.chunk.js"
+    "revision": "3e26f3e02383edf20005",
+    "url": "/energy/static/js/main.e4c05a3a.chunk.js"
   },
   {
     "revision": "693ce8d273dd26b370ef",
