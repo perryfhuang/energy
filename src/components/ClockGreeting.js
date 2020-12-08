@@ -3,7 +3,7 @@ import { clockStyle, greetingStyle } from '../styling/ClockGreetingStyling'
 import moment from 'moment'
 
 const ClockGreeting = () => {
-  const [time, setTime] = useState()
+  const [time, setTime] = useState('2:00 AM')
 
   // Function to call moment library
   const updateTime = () => {
@@ -27,11 +27,20 @@ const ClockGreeting = () => {
     setInterval(updateTime, 1000)
   }, [])
 
+  let greeting
+  const hour = moment().hour()
+  if(hour > 16) {
+    greeting = 'Good evening'
+  } else if(hour > 11) {
+    greeting = 'Good afternoon'
+  } else {
+    greeting = 'Good morning'
+  }
 
   return(
     <div>
       <h1 style={clockStyle}>{time}</h1>
-      <p style={greetingStyle}>Hello, <span id='name' contentEditable='true'>Stranger</span>.</p>
+      <p style={greetingStyle}>{greeting}, <span id='name' contentEditable='true'>Stranger</span>.</p>
     </div>
   )
 }

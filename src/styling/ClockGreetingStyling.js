@@ -9,7 +9,7 @@ const clockStyle = {
 const greetingStyle = {
   color: 'white',
   textAlign: 'center',
-  fontSize: '60px',
+  fontSize: '54px',
   textShadow: '3px 3px 3px #000000',
   marginTop: '0'
 }
